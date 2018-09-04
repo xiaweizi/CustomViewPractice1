@@ -47,5 +47,10 @@ public class Practice4DrawPointView extends View {
         canvas.drawPoint(mWidth / 4 * 3, mHeight / 2, mPaint);
 
         canvas.drawLine(0, mHeight / 2, 80, mHeight / 2, mPaint);
+
+        float[] points = {0, 0, 50, 50, 50, 100, 100, 50, 100, 100, 150, 50, 150, 100};
+// 绘制四个点：(50, 50) (50, 100) (100, 50) (100, 100)
+        canvas.drawPoints(points, 2 /* 跳过两个数，即前两个 0 */,
+                8 /* 一共绘制 8 个数（4 个点）*/, mPaint);
     }
 }
